@@ -26,12 +26,13 @@ labels = []
 
 #itereate thru each directory (letter) in the dataset
 for dir in os.listdir(DATA_DIR):
-    #save x and y coordinates here 
-    dataaux = []
+
 
     #now iterate thru each image in 'data/<dir name>'
     for imgpath in os.listdir(os.path.join(DATA_DIR, dir)):
-
+        #save x and y coordinates here 
+        dataaux = []
+    
         #read each image and convert rgb
         img = cv2.imread(os.path.join(DATA_DIR, dir, imgpath))
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
